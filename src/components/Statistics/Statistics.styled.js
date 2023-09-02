@@ -13,7 +13,12 @@ export const StatsList = styled.ul`
   display: flex;
 `;
 
+export const TextTitle = styled.h2`
+  text-transform: uppercase;
+`;
+
 export const StatsItem = styled.li`
+  color: white;
   display: flex;
   flex-direction: column;
   padding: 10px;
