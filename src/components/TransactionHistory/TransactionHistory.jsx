@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ItemTransactions } from 'components/ItemTransactions/ItemTransactions';
-import { Table, TableTop } from './TransactionHistory.styled';
+import { Table, TableTop, FirstLine } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
     <Table>
-      <thead>
+      <FirstLine>
         <tr>
           <TableTop>Type</TableTop>
           <TableTop>Amount</TableTop>
           <TableTop>Currency</TableTop>
         </tr>
-      </thead>
+      </FirstLine>
 
       <tbody>
         {items.map(({ id, type, amount, currency }) => (

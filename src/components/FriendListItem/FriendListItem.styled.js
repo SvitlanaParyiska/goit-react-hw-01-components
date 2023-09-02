@@ -11,9 +11,9 @@ export const FriendItem = styled.li`
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
 `;
 
-export const StatusUser = styled.span(({ isOnline }) => {
+export const StatusUser = styled.span(({ $isOnline }) => {
   return {
-    backgroundColor: isOnline ? '#55ac57' : '#ff5153',
+    backgroundColor: { $isOnline } ? '#55ac57' : '#ff5153',
     marginLeft: '15px',
     width: '20px',
     height: '20px',
