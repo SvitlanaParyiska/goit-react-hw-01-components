@@ -21,3 +21,14 @@ export const FirstLine = styled.thead`
 export const TableTop = styled.th`
   padding: 15px 50px;
 `;
+
+export const TransactionItem = styled.td`
+  padding: 15px 50px;
+  font-weight: normal;
+`;
+
+export const LineTable = styled.tr`
+  &:nth-child(even) {
+    background-color: rgb(219, 237, 248);
+  }
+`;

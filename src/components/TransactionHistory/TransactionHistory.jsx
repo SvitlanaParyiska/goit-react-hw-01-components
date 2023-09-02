@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ItemTransactions } from 'components/ItemTransactions/ItemTransactions';
-import { Table, TableTop, FirstLine } from './TransactionHistory.styled';
+import {
+  Table,
+  TableTop,
+  FirstLine,
+  LineTable,
+  TransactionItem,
+} from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
@@ -16,12 +21,11 @@ export const TransactionHistory = ({ items }) => {
 
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
-          <ItemTransactions
-            key={id}
-            typeItem={type}
-            amountItem={amount}
-            currencyItem={currency}
-          />
+          <LineTable key={id}>
+            <TransactionItem>{type}</TransactionItem>
+            <TransactionItem>{amount}</TransactionItem>
+            <TransactionItem>{currency}</TransactionItem>
+          </LineTable>
         ))}
       </tbody>
     </Table>

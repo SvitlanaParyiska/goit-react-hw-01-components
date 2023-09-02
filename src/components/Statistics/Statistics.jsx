@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ItemStatistics } from 'components/ItemStatistics/ItemStatistics';
-import { Stats, StatsList } from './Statistics.styled';
+import { Stats, StatsList, StatsItem } from './Statistics.styled';
 
 export const Statistics = ({ statsData, title }) => {
   return (
@@ -9,11 +8,10 @@ export const Statistics = ({ statsData, title }) => {
       {title && <h2 className="title">{title}</h2>}
       <StatsList>
         {statsData.map(({ id, label, percentage }) => (
-          <ItemStatistics
-            key={id}
-            labelItem={label}
-            percentageItem={percentage}
-          />
+          <StatsItem key={id}>
+            <span className="label">{label}</span>
+            <span className="percentage">{percentage}%</span>
+          </StatsItem>
         ))}
       </StatsList>
     </Stats>

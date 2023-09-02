@@ -12,3 +12,9 @@ export const Stats = styled.section`
 export const StatsList = styled.ul`
   display: flex;
 `;
+
+export const StatsItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+`;
