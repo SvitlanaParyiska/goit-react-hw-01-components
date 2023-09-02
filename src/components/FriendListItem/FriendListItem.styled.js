@@ -13,7 +13,7 @@ export const FriendItem = styled.li`
 
 export const StatusUser = styled.span(({ $isOnline }) => {
   return {
-    backgroundColor: { $isOnline } ? '#55ac57' : '#ff5153',
+    backgroundColor: $isOnline ? '#55ac57' : '#ff5153',
     marginLeft: '15px',
     width: '20px',
     height: '20px',
